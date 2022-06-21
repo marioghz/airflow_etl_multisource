@@ -73,7 +73,7 @@ def sqlTransform():
         v_count = 0
         for row in f:
 
-            v_replace_quote = row.replace("'","")
+            v_replace_quote = str(row.replace("'",""))
             cursor.execute("""
                 INSERT INTO raw_student
                 VALUES ('{}')

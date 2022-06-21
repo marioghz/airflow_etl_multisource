@@ -152,10 +152,3 @@ def sqlLoad():
 
 
     print('####### Extract >> FINISHED #####')
-
-
-
-
-
-def hello():
-    print('####################   Hello!!!!    ##########')

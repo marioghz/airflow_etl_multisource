@@ -115,10 +115,10 @@ def sqlTransform():
         select  distinct a.id, a.name, a.sex, a.age, a.height, 
         a.weight, a.team, a.noc, a.games, a.year, 
         a.season, a.city, a.sport, a.event, a.medal 
-        from stg_olympics a 
+        from raw_olympics a 
         inner join (
         select id, name, event, count(1) as cnt
-		from stg_olympics
+		from raw_olympics
 		group by id, name, event
 		having count(1)>1
         ) b on (a.id=b.id and a.name=b.name and a.event=b.event)
